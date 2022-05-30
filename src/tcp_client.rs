@@ -1,12 +1,12 @@
 use std::{net::TcpStream, io::Write};
 
-pub struct client {
+pub struct Client {
     stream: TcpStream
 }
 
-impl client {
-    pub fn new() -> client {
-        client {
+impl Client {
+    pub fn new() -> Client {
+        Client {
             stream: TcpStream::connect("127.0.0.1:7878").unwrap()
         }
     }
